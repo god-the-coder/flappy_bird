@@ -1,0 +1,21 @@
+{
+  "name": "huming-bird",
+  "version": "1.0.0",
+  "description": "",
+  "main": "postcss.config.js",
+  "scripts": {
+    "build" : "postcss style.css -o dist/styles.css",
+    "watch" : "postcss style.css -o dist/styles.css --watch",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "@tailwindcss/postcss": "^4.1.15",
+    "postcss": "^8.5.6",
+    "postcss-cli": "^11.0.1",
+    "tailwindcss": "^4.1.15"
+  }
+}

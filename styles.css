@@ -1,0 +1,369 @@
+* {
+  margin: 0%;
+  padding: 0%;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+
+.pixel-text {
+  font-family: 'SuperPixel', "consolas";
+  text-shadow: 2px 2px #000;
+}
+
+
+
+/* fonts */
+
+.super-pixel {
+  font-family: "Lucida Console", "Courier New", monospace;
+  text-shadow:
+    -2px -2px 0 #000,
+    2px -2px 0 #000,
+    -2px 2px 0 #000,
+    2px 2px 0 #000;
+  -webkit-font-smoothing: none;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+
+
+
+
+
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+.container {
+  height: 100%;
+  width: 100%;
+  background-image: url("assets/images/background.png");
+  background-position: cover;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.flappy_bird {
+  height: 85%;
+  width: 100%;
+}
+
+.score {
+  text-shadow: 10px 10px 30px black;
+  font-family: cursive;
+  position: absolute;
+  z-index: 15;
+  top: 1rem;
+}
+
+.flappy {
+
+  height: 70px;
+  width: 80px;
+  /* height: 30%;
+    width: 20%; */
+  /* height: 40%;
+    width: 30%; */
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border: 1px solid transparent;
+  background-image: url("assets/images/Bird.png");
+  aspect-ratio: 1 / 1;
+
+}
+
+.pad {
+  padding-left: 25%;
+  height: 85%;
+  width: 100%;
+}
+
+.pipe {
+  width: 14%;
+  position: absolute;
+  z-index: 10;
+  right: 0px;
+  animation: movepipe 10s linear forwards;
+}
+
+@keyframes movepipe {
+  from {
+    left: 100%;
+  }
+
+  to {
+    left: -300px;
+  }
+}
+
+
+.pipe1 {
+  height: 50%;
+  width: 100%;
+}
+
+.pipe2 {
+  height: 50%;
+  width: 100%;
+}
+
+
+.death_display {
+  background-color: #DBD98F;
+  position: absolute;
+  z-index: 10;
+  border: 2px solid transparent;
+  border-radius: 1rem;
+}
+
+.medal_svg_div {
+  border-radius: 50%;
+  width: 35%;
+  height: 30%;
+  border-color: transparent;
+  box-shadow: 5px 5px 10px #EEEBA2;
+}
+
+.medal {
+  padding-bottom: 2rem;
+}
+
+
+.restart {
+  height: 40px;
+  width: 80px;
+  color: white;
+  position: absolute;
+  bottom: 2rem;
+  border: 2px solid transparent;
+  border-radius: 1rem;
+
+}
+
+
+/* shadow */
+
+.shadow-br {
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+
+.pipe1,
+.pipe2 {
+  background: linear-gradient(to right,
+      #1e8f3f 0%,
+      #4ae35b 25%,
+      #c5fcae 50%,
+      #4ae35b 75%,
+      #1e8f3f 100%);
+}
+
+
+
+@media (min-width: 500px) and (max-width: 1000px) {
+
+  .flappy {
+
+    width: 20%;
+    height: 30%;
+  }
+
+}
+
+
+@media (max-width: 500px) {
+
+  .flappy {
+    height: 40%;
+    width: 30%;
+  }
+
+}
+
+
+
+
+/* Medium screens (tablets, small laptops) */
+@media (max-width: 1000px) {
+  .flappy {
+    width: 12vw;
+    height: 10vh;
+  }
+
+  .pipe {
+    width: 14vw;
+  }
+
+  .score {
+    font-size: 1.2rem;
+  }
+
+  .death_display {
+    width: 85vw;
+    height: 45vh;
+  }
+}
+
+/* Small screens (phones) */
+@media (max-width: 600px) {
+  .flappy {
+    width: 18vw;
+    height: 9vh;
+  }
+
+  .pipe {
+    width: 18vw;
+  }
+
+  .score {
+    font-size: 1rem;
+  }
+
+  .death_display {
+    width: 95vw;
+    height: 50vh;
+  }
+
+  .restart {
+    width: 80px;
+    height: 35px;
+    font-size: 0.9rem;
+  }
+}
+
+/* Very small screens */
+@media (max-width: 400px) {
+  .flappy {
+    width: 22vw;
+    height: 8vh;
+  }
+
+  .pipe {
+    width: 20vw;
+  }
+
+  .score {
+    font-size: 0.9rem;
+  }
+
+  .death_display {
+    width: 98vw;
+    height: 50vh;
+  }
+}
+
+
+/* ===== MOBILE LANDSCAPE & PORTRAIT RESPONSIVENESS ===== */
+
+/* Portrait mode (phones held vertically) */
+@media (max-width: 600px) and (orientation: portrait) {
+  .container {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+  }
+
+  .flappy {
+    width: 20vw;
+    height: 10vh;
+    position: absolute;
+  }
+
+  .pipe {
+    width: 18vw;
+  }
+
+  .score {
+    position: absolute;
+    top: 2vh;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 1.2rem;
+  }
+
+  .death_display {
+    width: 90vw;
+    height: 45vh;
+  }
+
+  .restart {
+    width: 80px;
+    height: 35px;
+    font-size: 0.9rem;
+  }
+}
+
+/* Landscape mode (phones held sideways) */
+@media (max-width: 900px) and (orientation: landscape) {
+  .container {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+  }
+
+  .flappy {
+    width: 12vw;
+    height: 18vh;
+  }
+
+  .pipe {
+    width: 10vw;
+  }
+
+  .score {
+    top: 2vh;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 1rem;
+  }
+
+  .death_display {
+    width: 70vw;
+    height: 60vh;
+  }
+
+  .restart {
+    width: 70px;
+    height: 30px;
+    font-size: 0.8rem;
+  }
+}
+
+/* === FIX: Bird fully visible on all screen sizes === */
+.flappy {
+  background-size: contain !important;
+  /* show the full bird */
+  background-position: center center !important;
+  background-repeat: no-repeat !important;
+}
+
+
+.bird-img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.container {
+  position: relative;  /* parent for .flappy */
+  overflow: hidden;    /* keeps bird inside container */
+}
+@media (max-width: 600px) {
+  .flappy {
+    height: 50px;
+    width: 55px;
+  }
+}
+
+@media (max-width: 400px) {
+  .flappy {
+    height: 45px;
+    width: 50px;
+  }
+}
